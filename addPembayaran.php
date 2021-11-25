@@ -11,19 +11,30 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tambah Transaksi</title>
+        <title>Tambah Paket</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
+            body{ 
+                font: 16px Raleway;
+                text-align: center; 
+                background-color: rgb(255, 255, 255);
+                background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
+                background-size: cover;
+            }
             table {
                 margin-left: auto;
                 margin-right: auto;
+                border-color: rgb(0, 0, 0);
+                border-collapse: collapse;
+            }
+            h1 {
+            font: 50px Norican;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(255, 0, 0);
             }
             h2 {
-                text-align: center;
-            }
-            h3 {
-                text-align: center;
-            }
-            h4 {
                 text-align: center;
             }
             table {
@@ -33,27 +44,37 @@
             th {
                 padding: 10px 10px 10px 10px;
                 text-align: center;
+                font-weight: bold;
+                font-size: 17px;
+                background-color: rgb(254, 99, 107);
+                color: rgb(255, 255, 255);
             }
             tr  {
                 text-align: center;
+                color: rgb(0, 0, 0);
             }
-            td  {
-                text-align: center;
-                padding: 7px 10px 7px 10px;
+            td {
+                padding: 10px 10px 10px 10px;
+                color: rgb(0, 0, 0);
             }
             .Tabel {
-                margin-bottom: 10px;
-                margin-left: 20px;
-                margin-right: 20px;
-                border-style: solid;
+                width: 90%;
+                padding: 10px 10px 10px 10px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
             }
         </style>
     </head>
     <body>
-        <a href="homeadmin.php">Home Admin</a> 
-        <br/><br/>
-
+    <div class="Tabel">
         <div class="Tabel">
+        <div class="Judul">
+        <h1 class="my-5">SiLambat</h1>
+        </div>
         <h2>Tambah Transaksi</h2>
         <form action="addPembayaran.php" method="post" name="form1"> 
             <table width="25%" border="0"> 
@@ -118,8 +139,13 @@
                     echo "<td>".$item['no_ktp']."</td>";
                 }
             ?>
-        </table><br>
+        </table>
+        
         </div>
+        <br/>
+            <a href="homeadmin.php">Home Admin</a> 
+            <br/> 
+            <br/></br>
 
         <?php
             // Check If form submitted, insert form data into users table.
@@ -140,5 +166,6 @@
                 echo "Berhasil menambahkan ke Katalog Handphone! <br><a href='homeadmin.php'>Kembali ke Home Admin</a>"; 
             }
         ?>
+    </div>
     </body>
 </html>

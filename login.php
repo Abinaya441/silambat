@@ -99,15 +99,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ 
-            background-image: url("https://images.squarespace-cdn.com/content/v1/5cb532c8fae5d50001f44c3f/1555380140882-QLAEBWFQ8DIG4L50Y9VF/Asana+Color+Gradient+Gradient+-+htmlcolors.com.png?format=2500w");
-            font: 16px sans-serif; 
+            font: Outfit;
+            text-align: center; 
             background-color: rgb(255, 255, 255);
+            background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
             background-size: cover;
         }
         h1 {
+            font: 50px Norican;
             margin-left: 10px;
             margin-right: 10px;
             margin-bottom: 50px;
@@ -167,8 +171,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input id="tombolLogin" type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p><a id="hrefHalLogin" href="register.php">Daftar sekarang</a>.</p>
-            <p><a id="hrefHalLogin" href="loginadmin.php">Login Admin</a>.</p>
+            <p><a id="hrefHalLogin" href="register.php">Daftar sekarang</a></p>
+            <p><a id="hrefHalLogin" href="loginadmin.php">Login Admin</a></p>
         </form>
     </div>
 </body>

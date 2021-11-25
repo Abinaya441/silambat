@@ -105,15 +105,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Daftar</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ 
-            background-image: url("https://images.squarespace-cdn.com/content/v1/5cb532c8fae5d50001f44c3f/1555380140882-QLAEBWFQ8DIG4L50Y9VF/Asana+Color+Gradient+Gradient+-+htmlcolors.com.png?format=2500w");
-            font: 14px sans-serif; 
-            background-color: rgb(233, 228, 201); 
+            font: Outfit;
+            text-align: center; 
+            background-color: rgb(255, 255, 255);
+            background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
             background-size: cover;
         }
         h1 {
+            font: 50px Norican;
             text-align: center;
             margin-left: 10px;
             margin-right: 10px;
@@ -138,7 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         #tombolDaftar {
             border-radius: 100px;
-            background-color: rgb(200, 0, 0);
+            background-color: rgb(0, 150, 0);
             padding: 0px, 0px, 0px, 0px;
         }
         #tombolReset {
@@ -176,7 +180,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input id="tombolDaftar" type="submit" class="btn btn-primary" value="Submit">
                 <input id="tombolReset" type="reset" class="btn btn-secondary ml-2" value="Reset">
             </div>
-            <p>Sudah memiliki akun? <a id="hrefLogin" href="login.php">Login disini</a>.</p>
+            <p>Sudah memiliki akun? <a id="hrefLogin" href="login.php">Login disini</a></p>
         </form>
     </div>    
 </body>

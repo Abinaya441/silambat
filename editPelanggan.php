@@ -34,12 +34,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Edit Pelanggan</title>
-    </head>
-    <style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tambah Paket</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
+        <style>
+            body{ 
+                font: 16px Raleway;
+                text-align: center; 
+                background-color: rgb(255, 255, 255);
+                background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
+                background-size: cover;
+            }
             table {
-            margin-left: auto;
-            margin-right: auto;
+                margin-left: auto;
+                margin-right: auto;
+                border-color: rgb(0, 0, 0);
+                border-collapse: collapse;
+            }
+            h1 {
+            font: 50px Norican;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(255, 0, 0);
             }
             h2 {
                 text-align: center;
@@ -51,27 +70,36 @@
             th {
                 padding: 10px 10px 10px 10px;
                 text-align: center;
+                font-weight: bold;
+                font-size: 17px;
+                background-color: rgb(254, 99, 107);
+                color: rgb(255, 255, 255);
             }
             tr  {
                 text-align: center;
-                padding: 10px 10px 10px 10px;
+                color: rgb(0, 0, 0);
             }
-            td  {
-                text-align: center;
-                padding: 7px 10px 7px 10px;
+            td {
+                padding: 10px 10px 10px 10px;
+                color: rgb(0, 0, 0);
             }
             .Tabel {
-                margin-bottom: 10px;
-                margin-left: 20px;
-                margin-right: 20px;
-                border-style: solid;
+                width: 90%;
+                padding: 10px 10px 10px 10px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
             }
         </style>
-    <body>
-    <body><a href="homeadmin.php">Home Admin</a> 
-    <br/><br/> 
-    
+    </head>
+    <body> 
     <div class="Tabel">
+    <div class="Judul">
+        <h1 class="my-5">SiLambat</h1>
+        </div>
     <h2>Edit Pelanggan</h2> 
         <form name="update_os" method="post" action="editPelanggan.php">
             <table border="0"> 
@@ -94,7 +122,11 @@
                     <td><input type="hidden" name="id_pelanggan" value=<?php echo $_GET['id_pelanggan'];?>></td> 
                     <td><input type="submit" name="update" value="Update"></td> 
                 </tr> 
-            </table> 
+            </table>
+            <br/>
+            <a href="homeadmin.php">Home Admin</a> 
+            <br/> 
+            <br/></br> 
         </form>
         </div>
     </body>

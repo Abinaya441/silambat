@@ -22,43 +22,79 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage Admin</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
+            body{ 
+            font: 16px Raleway;
+            text-align: center; 
+            background-color: rgb(255, 255, 255);
+            background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
+            background-size: cover;
+            }
+            h1 {
+            font: 50px Norican;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(255, 0, 0);
+            }
+            h2 {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(0, 0, 0);
+            }
             h3 {
                 text-align: center;
             }
             table {
                 margin-left: auto;
                 margin-right: auto;
+                border-color: rgb(0, 0, 0);
+                border-collapse: collapse;
             }
             th {
                 padding: 10px 10px 10px 10px;
                 text-align: center;
+                font-weight: bold;
+                font-size: 17px;
+                background-color: rgb(254, 99, 107);
+                color: rgb(255, 255, 255);
             }
             tr  {
                 text-align: center;
+                color: rgb(0, 0, 0);
             }
             td {
                 padding: 10px 10px 10px 10px;
+                color: rgb(0, 0, 0);
             }
             p {
                 text-align: center;
             }
             .Tabel {
-                margin-bottom: 10px;
-                margin-left: 20px;
-                margin-right: 20px;
-                border-style: solid;
+                width: 90%;
+                padding: 10px 10px 10px 10px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
             }
         </style>
     </head>
     <body>
-        <div style="text-align: center">
-            <h1>Data Keseluruhan SiLambat</h1>
+        <div class="Tabel">
+        <div class="Judul">
+        <h1 class="my-5">SiLambat</h1>
         </div>
+        <br/>
+        <div style="text-align: center">
+            <h2>Data Keseluruhan</h2>
+        </div></br>
         
-        <div class='Tabel'>
         <h3>Daftar Paket</h3>
-        <table width='80%' border=1>
+        <table width='80%' border=2>
         <p>
             <a href="addPaket.php">Tambah Paket</a>
         </p> 
@@ -79,9 +115,6 @@
                 }
             ?>
         </table><br>
-        </div>
-
-        <div class='Tabel'>
         <h3>Daftar Pelanggan</h3>
         <table width='80%' border=1>
         <p>
@@ -104,9 +137,6 @@
                 }
             ?>
         </table><br>
-        </div>
-        
-        <div class='Tabel'>
         <h3>Daftar Transaksi</h3>
         <table width='80%' border=1>
         <p>
@@ -133,8 +163,7 @@
                 } 
             ?>
         </table><br>
-        </div>
-        
+        <br/>
         <div style="text-align: center">
             <b><a href="viewSoftDelete.php">Recycle Bin</a></b>
         </div>
@@ -142,5 +171,7 @@
         <p>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
         </p>
+        </div>
+            <br/>
     </body>
 </html>

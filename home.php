@@ -28,10 +28,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ 
-            font: 14px Outfit;
+            font: Outfit;
             text-align: center; 
             background-color: rgb(255, 255, 255);
-            background: linear-gradient(to bottom, #00d2ff, #3a7bd5);
+            background: linear-gradient(to top, #fe636b, #f4af02) no-repeat center fixed;
+            background-size: cover;
         }
         h1 {
             font: 50px Norican;
@@ -40,7 +41,6 @@
             color: rgb(255, 0, 0);
         }
         h2 {
-            /* font: 70px sans-serif; */
             margin-left: 10px;
             margin-right: 10px;
             color: rgb(0, 0, 0);
@@ -60,7 +60,7 @@
             text-align: center;
             font-weight: bold;
             font-size: 17px;
-            background-color: rgb(58, 123, 213);
+            background-color: rgb(254, 99, 107);
             color: rgb(255, 255, 255);
         }
         tr  {
@@ -90,15 +90,12 @@
         .Tabel {
             width: 90%;
             padding: 10px 10px 10px 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
             margin-left: auto;
             margin-right: auto;
-            /* border-style: double;
-            border-width: 5px; */
             background-color: rgb(255, 255, 255);
             border-radius: 100px;
-            /* border-color: rgb(74, 71, 53); */
         }
         .buttonSearch {
             margin-bottom: 15px;
@@ -108,27 +105,24 @@
             color: rgb(255, 255, 255);
             border-radius: 50px;
             border-color: rgb(200, 0, 0);
-            /* -ms-transform: translate(-50%, -50%); */
-            /* transform: translate(-50%, -50%); */
         }
         .searchLabel {
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
+    <div class="Tabel">
     <div class="Judul">
         <h1 class="my-5">SiLambat</h1>
     <div>
     <h2 class="my-5">Hello, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>!</h2>
-    <h2 class="my-5">Selamat datang di sistem informasi pengiriman paket</h2>
-
-    <div class="Tabel">
     <h3>Data Pengiriman Barang</h3>
     <form action="home.php" method="GET" name="form1"> 
         <table width="25%" border="0"> 
             <tr>
-                <td class="searchLabel">Search by Name:</td>
+                <td class="searchLabel">Cari:</td>
                 <td><input type="text" name="search"></td> 
             </tr>
         </table>
@@ -155,11 +149,7 @@
     </div>
     
     <p>
-        <a href="logout.php" class="btn btn-danger ml-3">Log Out</a>
+        <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
     </p>
 </body>
 </html>
-
-<?php
-    
-?>
