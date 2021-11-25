@@ -24,15 +24,17 @@
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ 
-            font: 14px Outfit; 
+            font: 14px Outfit;
             text-align: center; 
             background-color: rgb(255, 255, 255);
-            background: linear-gradient(to top, #b2fefa, #0ed2f7); 
+            background: linear-gradient(to bottom, #00d2ff, #3a7bd5);
         }
         h1 {
+            font: 50px Norican;
             margin-left: 10px;
             margin-right: 10px;
             color: rgb(255, 0, 0);
@@ -45,63 +47,69 @@
         }
         h3 {
             text-align: center;
-            color: rgb(74, 71, 53);
+            color: rgb(0, 0, 0);
             font-weight: bold;
         }
         table {
             margin-left: auto;
             margin-right: auto;
-            border-color: rgb(74, 71, 53);
+            border-color: rgb(0, 0, 0);
         }
         th {
             padding: 10px 10px 10px 10px;
             text-align: center;
             font-weight: bold;
             font-size: 17px;
-            background-color: rgb(48, 46, 34);
-            color: rgb(219, 211, 171);
+            background-color: rgb(58, 123, 213);
+            color: rgb(255, 255, 255);
         }
         tr  {
             text-align: center;
-            color: rgb(74, 71, 53);
+            color: rgb(0, 0, 0);
         }
         td {
             padding: 10px 10px 10px 10px;
-            color: rgb(74, 71, 53);
+            color: rgb(0, 0, 0);
         }
         p {
             text-align: center;
         }
+        .wrapper{ 
+            text-align: center;
+            width: 1200px; 
+            padding: 100px; 
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border-radius: 100px;
+            background-color: rgb(255, 255, 255);
+        }
         .Tabel {
+            width: 90%;
             padding: 10px 10px 10px 10px;
             margin-top: 10px;
             margin-bottom: 10px;
-            margin-left: 20px;
-            margin-right: 20px;
-            /* border-style: double;
-            border-width: 5px; */
-            background-color: rgb(255, 255, 255);
-            border-radius: 100px;
-            /* border-color: rgb(74, 71, 53); */
-        }
-        .TabelSearch {
-            width: 35%;
-            padding: 20px 20px 20px 20px;
-            margin-top: 10px;
-            margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
-            border-radius: 100px;
             /* border-style: double;
             border-width: 5px; */
             background-color: rgb(255, 255, 255);
+            border-radius: 100px;
             /* border-color: rgb(74, 71, 53); */
         }
         .buttonSearch {
+            margin-bottom: 15px;
             background-color: rgb(200, 0, 0);
-            color: rgb(255, 250, 227);
-            border-color: rgb(74, 71, 53);
-            border-radius: 3px;
+            margin-left: 20px;
+            margin-right: auto;
+            color: rgb(255, 255, 255);
+            border-radius: 50px;
+            border-color: rgb(200, 0, 0);
+            /* -ms-transform: translate(-50%, -50%); */
+            /* transform: translate(-50%, -50%); */
         }
         .searchLabel {
             font-weight: bold;
@@ -114,21 +122,19 @@
     <div>
     <h2 class="my-5">Hello, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>!</h2>
     <h2 class="my-5">Selamat datang di sistem informasi pengiriman paket</h2>
-    <div class="TabelSearch">
+
+    <div class="Tabel">
+    <h3>Data Pengiriman Barang</h3>
     <form action="home.php" method="GET" name="form1"> 
         <table width="25%" border="0"> 
             <tr>
                 <td class="searchLabel">Search by Name:</td>
                 <td><input type="text" name="search"></td> 
             </tr>
-            <td/><td><input class="buttonSearch" type="submit" value="Search" /></td>
-        </table> 
+        </table>
+        <input class="buttonSearch" type="submit" value="Search" /> 
     </form>
-    </div>
-
-    <div class="Tabel">
-    <h3>Data Pengiriman Barang</h3>
-        <table width='80%' border=2>
+        <table width='80%' border=2 >
             <tr class="Search">
                 <th>Nama Pelanggan</th> <th>Nomor HP</th> <th>Nomor KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Tanggal</th> <th>Total Harga</th>
             </tr>
