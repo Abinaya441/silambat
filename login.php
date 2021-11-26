@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Login - SiLambat</title>
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -171,7 +171,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input id="tombolLogin" type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p><a id="hrefHalLogin" href="register.php">Daftar sekarang</a></p>
+            <p>Belum memiliki akun? <a id="hrefHalLogin" href="register.php">Daftar sekarang</a></p>
             <p><a id="hrefHalLogin" href="loginadmin.php">Login Admin</a></p>
         </form>
     </div>

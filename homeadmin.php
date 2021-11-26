@@ -21,7 +21,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage Admin</title>
+        <title>Admin - SiLambat</title>
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
@@ -111,7 +111,7 @@
                     echo "<td>".$item['harga']."</td>"; 
                     echo "<td><a href='editPaket.php?id_paket=$item[id_paket]'>Edit</a> 
                     | 
-                    <a href='softdeletePaket.php?id_paket=$item[id_paket]'>Soft Delete</a></td></tr>";
+                    <a href='softdeletePaket.php?id_paket=$item[id_paket]'>Hapus</a></td></tr>";
                 }
             ?>
         </table><br>
@@ -133,7 +133,7 @@
                     echo "<td>".$item['no_ktp']."</td>";
                     echo "<td><a href='editPelanggan.php?id_pelanggan=$item[id_pelanggan]'>Edit</a> 
                     | 
-                    <a href='softdeletePelanggan.php?id_pelanggan=$item[id_pelanggan]'>Soft Delete</a></td></tr>"; 
+                    <a href='softdeletePelanggan.php?id_pelanggan=$item[id_pelanggan]'>Hapus</a></td></tr>"; 
                 }
             ?>
         </table><br>
@@ -143,12 +143,13 @@
             <a href="addPembayaran.php">Tambah Transaksi</a>
         </p>
             <tr>
-                <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Jumlah</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
+            <th>ID Pelanggan</th> <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Jumlah</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
             </tr>
             
             <?php
                 while($item = mysqli_fetch_array($listnota)) {
                     echo "<tr>";
+                    echo "<td>".$item['id_transaksi']."</td>";
                     echo "<td>".$item['nama']."</td>";
                     echo "<td>".$item['no_hp']."</td>";
                     echo "<td>".$item['no_ktp']."</td>";
@@ -159,13 +160,13 @@
                     echo "<td>".$item['total_harga']."</td>";
                     echo "<td><a href='editPembayaran.php?id_transaksi=$item[id_transaksi]'>Edit</a> 
                     | 
-                    <a href='softdeletePembayaran.php?id_transaksi=$item[id_transaksi]'>Soft Delete</a></td></tr>";
+                    <a href='softdeletePembayaran.php?id_transaksi=$item[id_transaksi]'>Hapus</a></td></tr>";
                 } 
             ?>
         </table><br>
         <br/>
         <div style="text-align: center">
-            <b><a href="viewSoftDelete.php">Recycle Bin</a></b>
+            <b><a href="recycleBin.php">Recycle Bin</a></b>
         </div>
 
         <p>

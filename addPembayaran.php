@@ -11,7 +11,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tambah Paket</title>
+        <title>Tambah Paket - SiLambat</title>
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
@@ -71,7 +71,6 @@
     </head>
     <body>
     <div class="Tabel">
-        <div class="Tabel">
         <div class="Judul">
         <h1 class="my-5">SiLambat</h1>
         </div>
@@ -100,11 +99,9 @@
                 </tr> 
             </table> 
         </form>
-        </div>
 
         <h3>Masukkan ID Paket dan ID Pelanggan sesuai nomor tabel di bawah:</h3>
 
-        <div class="Tabel">
         <h4>Daftar Paket</h4>
         <table width='80%' border=1>
             <tr>
@@ -121,9 +118,6 @@
                 }
             ?>
         </table><br>
-        </div>
-
-        <div class="Tabel">
         <h4>Daftar Pelanggan</h4>
         <table width='80%' border=1>
             <tr>
@@ -141,7 +135,6 @@
             ?>
         </table>
         
-        </div>
         <br/>
             <a href="homeadmin.php">Home Admin</a> 
             <br/> 

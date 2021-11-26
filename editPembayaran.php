@@ -103,13 +103,10 @@
     </head>
     <body>
     <div class="Tabel">
-        <div class="Tabel">
         <div class="Judul">
         <h1 class="my-5">SiLambat</h1>
         </div>
     <h2>Edit Pembayaran</h2> 
-
-        <div class="Tabel">
         <form name="update_pembayaran" method="post" action="editPembayaran.php">
             <table border="0"> 
                 <tr>
@@ -137,11 +134,9 @@
                 </tr> 
             </table> 
         </form>
-        </div>
 
         <h3>Masukkan ID Paket dan ID Pelanggan sesuai nomor tabel di bawah:</h3>
 
-        <div class="Tabel">
         <h3>Daftar Paket</h3>
         <table width='80%' border=1>
         <tr>
@@ -158,9 +153,6 @@
                 }
             ?>
         </table><br>
-        </div>
-
-        <div class="Tabel">
         <h3>Daftar Pelanggan</h3>
         <table width='80%' border=1>
         <tr>
@@ -177,10 +169,9 @@
                 }
             ?>
         </table>
-        
-        </div>
         <br/>
             <a href="homeadmin.php">Home Admin</a> 
             <br/>
+            <br/></br>
     </body>
 </html>

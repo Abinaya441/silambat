@@ -9,5 +9,5 @@
     $result = mysqli_query($link, "UPDATE paket SET is_delete=0 WHERE id_paket=$id_paket"); 
     
     // After delete redirect to Home, so that latest user list will be displayed. 
-    header("Location: viewSoftDelete.php"); 
+    header("Location: recycleBin.php"); 
 ?>

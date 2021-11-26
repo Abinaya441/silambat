@@ -104,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Daftar</title>
+    <title>Registrasi - SiLambat</title>
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

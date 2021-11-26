@@ -21,7 +21,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage Admin</title>
+        <title>Recycle Bin - SiLambat</title>
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
@@ -89,7 +89,7 @@
         <h1 class="my-5">SiLambat</h1>
         </div>
         <div style="text-align: center">
-            <h2>Data Keseluruhan SiLambat</h2>
+            <h2>Recycle Bin</h2>
         </div>
         
         <h3>Daftar Paket</h3>
@@ -144,9 +144,7 @@
                     echo "<td>".$item['jenis_paket']."</td>";
                     echo "<td>".$item['tanggal']."</td>";
                     echo "<td>".$item['total_harga']."</td>";
-                    echo "<td><a href='restorePembayaran.php?id_transaksi=$item[id_transaksi]'>Restore</a> 
-                    | 
-                    <a href='deletePembayaran.php?id_transaksi=$item[id_transaksi]'>Delete</a></td></tr>";
+                    echo "<td><a href='restorePembayaran.php?id_transaksi=$item[id_transaksi]'>Restore</a></td></tr>";
                 } 
             ?>
         </table><br>
