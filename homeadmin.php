@@ -12,7 +12,7 @@
 
     $listpaket = mysqli_query($link, "SELECT * FROM paket WHERE is_delete=0 ORDER BY id_paket");
     $listpelanggan = mysqli_query($link, "SELECT * FROM pelanggan WHERE is_delete=0 ORDER BY id_pelanggan");
-    $listnota = mysqli_query($link, "SELECT pembayaran.id_transaksi, pelanggan.nama, pelanggan.no_hp, pelanggan.no_ktp, paket.nama_paket, paket.jenis_paket, pembayaran.jumlah, pembayaran.tanggal, paket.harga*pembayaran.jumlah AS total_harga FROM paket INNER JOIN pembayaran ON paket.id_paket=pembayaran.id_paket INNER JOIN pelanggan ON pelanggan.id_pelanggan=pembayaran.id_pelanggan WHERE pembayaran.is_delete = 0 ORDER BY nama");
+    $listnota = mysqli_query($link, "SELECT pembayaran.id_transaksi, pelanggan.nama, pelanggan.no_hp, pelanggan.no_ktp, paket.nama_paket, paket.jenis_paket, pembayaran.jumlah, pembayaran.tanggal, paket.harga*pembayaran.jumlah AS total_harga FROM paket INNER JOIN pembayaran ON paket.id_paket=pembayaran.id_paket INNER JOIN pelanggan ON pelanggan.id_pelanggan=pembayaran.id_pelanggan WHERE pembayaran.is_delete = 0 ORDER BY id_transaksi");
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +20,11 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Admin - SiLambat</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
         <style>
@@ -143,7 +146,7 @@
             <a href="addPembayaran.php">Tambah Transaksi</a>
         </p>
             <tr>
-            <th>ID Pelanggan</th> <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Jumlah</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
+            <th>ID Transaksi</th> <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Jumlah</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
             </tr>
             
             <?php

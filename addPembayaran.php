@@ -156,7 +156,7 @@
                 // Insert user data into table 
                 $result = mysqli_query($link, "INSERT INTO pembayaran(id_paket, id_pelanggan, jumlah, tanggal) VALUES('$id_paket','$id_pelanggan','$jumlah','$tanggal')"); 
                 // Show message when user added 
-                echo "Berhasil menambahkan ke Katalog Handphone! <br><a href='homeadmin.php'>Kembali ke Home Admin</a>"; 
+                echo "Berhasil menambahkan ke Dafar Transaksi! <br><a href='homeadmin.php'>Kembali ke Home Admin</a>"; 
             }
         ?>
     </div>

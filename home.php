@@ -122,7 +122,7 @@
     <form action="home.php" method="GET" name="form1"> 
         <table width="25%" border="0"> 
             <tr>
-                <td class="searchLabel">Cari:</td>
+                <td class="searchLabel">Cari Pelanggan:</td>
                 <td><input type="text" name="search"></td> 
             </tr>
         </table>

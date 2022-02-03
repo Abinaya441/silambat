@@ -131,12 +131,13 @@
         <h3>Daftar Transaksi</h3>
         <table width='80%' border=1>
             <tr>
-                <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
+                <th>ID Transaksi</th> <th>Nama Pelanggan</th> <th>No. HP</th> <th>No. KTP</th> <th>Nama Paket</th> <th>Jenis Paket</th> <th>Tanggal</th> <th>Total Harga</th> <th>Modifikasi</th>
             </tr>
             
             <?php
                 while($item = mysqli_fetch_array($listnota)) {
                     echo "<tr>";
+                    echo "<td>".$item['id_transaksi']."</td>";
                     echo "<td>".$item['nama']."</td>";
                     echo "<td>".$item['no_hp']."</td>";
                     echo "<td>".$item['no_ktp']."</td>";
