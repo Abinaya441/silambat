@@ -2,6 +2,15 @@
     // include database connection file 
     include_once("config.php"); 
     
+    //Inisialisasi sesi
+    session_start();
+    
+    //Mengecek apakah user telah login, jika tidak akan kembali ke halaman login
+    if(!isset($_SESSION["loggedinadmin"]) || $_SESSION["loggedinadmin"] !== true){
+        header("location: loginadmin.php");
+        exit;
+    }
+    
     // Check if form is submitted for data update, then redirect to homepage after update 
     if(isset($_POST['update'])) { 
         $id_pelanggan = $_POST['id_pelanggan'];
@@ -105,21 +114,21 @@
             <table border="0"> 
                 <tr>
                     <td>Nama</td> 
-                    <td><input type="text" name="nama" value=<?php echo $nama;?>></td>
+                    <td><input type="text" name="nama" value="<?php echo $nama;?>"></td>
                 </tr> 
                 
                 <tr>
                     <td>No. HP</td> 
-                    <td><input type="text" name="no_hp" value=<?php echo $no_hp;?>></td> 
+                    <td><input type="text" name="no_hp" value="<?php echo $no_hp;?>"></td> 
                 </tr> 
 
                 <tr>
                     <td>No. KTP</td> 
-                    <td><input type="text" name="no_ktp" value=<?php echo $no_ktp;?>></td> 
+                    <td><input type="text" name="no_ktp" value="<?php echo $no_ktp;?>"></td> 
                 </tr> 
                 
                 <tr> 
-                    <td><input type="hidden" name="id_pelanggan" value=<?php echo $_GET['id_pelanggan'];?>></td> 
+                    <td><input type="hidden" name="id_pelanggan" value="<?php echo $_GET['id_pelanggan'];?>"></td> 
                     <td><input type="submit" name="update" value="Update"></td> 
                 </tr> 
             </table>

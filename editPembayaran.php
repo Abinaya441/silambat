@@ -2,6 +2,15 @@
     // include database connection file 
     include_once("config.php"); 
 
+    //Inisialisasi sesi
+    session_start();
+    
+    //Mengecek apakah user telah login, jika tidak akan kembali ke halaman login
+    if(!isset($_SESSION["loggedinadmin"]) || $_SESSION["loggedinadmin"] !== true){
+        header("location: loginadmin.php");
+        exit;
+    }
+
     $listpaket = mysqli_query($link, "SELECT * FROM paket WHERE is_delete=0 ORDER BY id_paket");
     $listpelanggan = mysqli_query($link, "SELECT * FROM pelanggan WHERE is_delete=0 ORDER BY id_pelanggan");
     
@@ -111,25 +120,25 @@
             <table border="0"> 
                 <tr>
                     <td>ID Paket</td> 
-                    <td><input type="text" name="id_paket" value=<?php echo $id_paket;?>></td> 
+                    <td><input type="text" name="id_paket" value="<?php echo $id_paket;?>"></td> 
                 </tr> 
 
                 <tr>
                     <td>ID Pelanggan</td> 
-                    <td><input type="text" name="id_pelanggan" value=<?php echo $id_pelanggan;?>></td> 
+                    <td><input type="text" name="id_pelanggan" value="<?php echo $id_pelanggan;?>"></td> 
                 </tr>
                 <tr>
                     <td>Jumlah</td> 
-                    <td><input type="text" name="jumlah" value=<?php echo $jumlah;?>></td> 
+                    <td><input type="text" name="jumlah" value="<?php echo $jumlah;?>"></td> 
                 </tr>
 
                 <tr>
                     <td>Tanggal</td> 
-                    <td><input type="text" name="tanggal" value=<?php echo $tanggal;?>></td> 
+                    <td><input type="text" name="tanggal" value="<?php echo $tanggal;?>"></td> 
                 </tr> 
                 
                 <tr> 
-                    <td><input type="hidden" name="id_transaksi" value=<?php echo $_GET['id_transaksi'];?>></td> 
+                    <td><input type="hidden" name="id_transaksi" value="<?php echo $_GET['id_transaksi'];?>"></td> 
                     <td><input type="submit" name="update" value="Update"></td> 
                 </tr> 
             </table> 

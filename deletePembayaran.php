@@ -1,6 +1,14 @@
 <?php
     // include database connection file
     include_once("config.php");
+    //Inisialisasi sesi
+    session_start();
+    
+    //Mengecek apakah user telah login, jika tidak akan kembali ke halaman login
+    if(!isset($_SESSION["loggedinadmin"]) || $_SESSION["loggedinadmin"] !== true){
+        header("location: loginadmin.php");
+        exit;
+    }
     // Get id from URL to delete that data
     $id = $_GET['id'];
     // Delete data row from table based on given id

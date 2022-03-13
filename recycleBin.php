@@ -5,7 +5,7 @@
     session_start();
     
     //Mengecek apakah user telah login, jika tidak akan kembali ke halaman login
-    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    if(!isset($_SESSION["loggedinadmin"]) || $_SESSION["loggedinadmin"] !== true){
         header("location: loginadmin.php");
         exit;
     }

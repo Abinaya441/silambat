@@ -2,6 +2,15 @@
     // include database connection file 
     include_once("config.php"); 
     
+    //Inisialisasi sesi
+    session_start();
+    
+    //Mengecek apakah user telah login, jika tidak akan kembali ke halaman login
+    if(!isset($_SESSION["loggedinadmin"]) || $_SESSION["loggedinadmin"] !== true){
+        header("location: loginadmin.php");
+        exit;
+    }
+
     // Check if form is submitted for data update, then redirect to homepage after update 
     if(isset($_POST['update'])) { 
         $id_paket = $_POST['id_paket'];
@@ -10,7 +19,7 @@
         $harga=$_POST['harga']; 
         
         // update data 
-        $result = mysqli_query($link, "UPDATE paket SET nama_paket='$nama_paket', jenis_paket='$jenis_paket', harga='$harga' WHERE id_paket=$id_paket"); 
+        $result = mysqli_query($link, "UPDATE paket SET nama_paket='".$nama_paket."', jenis_paket='$jenis_paket', harga='$harga' WHERE id_paket=$id_paket"); 
         
         // Redirect to homepage to display updated data in list 
         header("Location: homeadmin.php"); }
@@ -97,29 +106,29 @@
     </head>
     <body> 
     <div class="Tabel">
-    <div class="Judul">
-        <h1 class="my-5">SiLambat</h1>
+        <div class="Judul">
+            <h1 class="my-5">SiLambat</h1>
         </div>
     <h2>Edit Paket</h2> 
         <form name="update_paket" method="post" action="editPaket.php">
             <table border="0"> 
                 <tr>
                     <td>Nama Paket</td> 
-                    <td><input type="text" name="nama_paket" value=<?php echo $nama_paket;?>></td>
+                    <td><input type="text" name="nama_paket" value="<?php echo $nama_paket;?>"></td>
                 </tr> 
                 
                 <tr>
                     <td>Jenis Paket</td> 
-                    <td><input type="text" name="jenis_paket" value=<?php echo $jenis_paket;?>></td> 
+                    <td><input type="text" name="jenis_paket" value="<?php echo $jenis_paket;?>"></td> 
                 </tr> 
 
                 <tr>
                     <td>Harga</td> 
-                    <td><input type="text" name="harga" value=<?php echo $harga;?>></td> 
+                    <td><input type="text" name="harga" value="<?php echo $harga;?>"></td> 
                 </tr> 
                 
                 <tr> 
-                    <td><input type="hidden" name="id_paket" value=<?php echo $_GET['id_paket'];?>></td> 
+                    <td><input type="hidden" name="id_paket" value="<?php echo $_GET['id_paket'];?>"></td> 
                     <td><input type="submit" name="update" value="Update"></td> 
                 </tr> 
             </table> 

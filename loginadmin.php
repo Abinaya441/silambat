@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_start();
                             
                             //Menyimpan data pada variabel sesi
-                            $_SESSION["loggedin"] = true;
+                            $_SESSION["loggedinadmin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
