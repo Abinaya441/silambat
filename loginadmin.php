@@ -3,7 +3,7 @@
 session_start();
  
 //Mengecek apakah user sudah login. Bila iya, user akan dibawa ke halaman Home
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(isset($_SESSION["loggedinadmin"]) && $_SESSION["loggedinadmin"] === true){
     header("location: homeadmin.php");
     exit;
 }
